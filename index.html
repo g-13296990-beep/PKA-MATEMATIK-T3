@@ -106,7 +106,7 @@ function duck(x){if(mg)mg.gain.setTargetAtTime(x,ac.currentTime,.1)}
 function tm(){mOn=!mOn;if(mOn)music(trk);else{clearInterval(seq);seq=null}render()}
 function ts(){sOn=!sOn;render()}
 document.addEventListener('pointerdown',()=>{AX();if(!seq&&mOn)music(trk)});
-function head(){return `<header><img src="${C.logo}" alt="SMK Lundu"><h1>Program Kecermelangan Akademik<small>${t().sub}</small></h1><span class="tg"><button class="${mOn?'':'off'}" onclick="tm()">🎵</button><button class="${sOn?'':'off'}" onclick="ts()">🔊</button><button class="${S.lang=='ms'?'on':''}" onclick="sfx('click');lg('ms')">BM</button><button class="${S.lang=='en'?'on':''}" onclick="sfx('click');lg('en')">BI</button></span></header>`}
+function head(){return `<header><img src="${C.logo}" alt="SMK Lundu"><h1>Program Kecemerlangan Akademik<small>${t().sub}</small></h1><span class="tg"><button class="${mOn?'':'off'}" onclick="tm()">🎵</button><button class="${sOn?'':'off'}" onclick="ts()">🔊</button><button class="${S.lang=='ms'?'on':''}" onclick="sfx('click');lg('ms')">BM</button><button class="${S.lang=='en'?'on':''}" onclick="sfx('click');lg('en')">BI</button></span></header>`}
 function pop(ic,ti,msg,cb){sfx('no');const m=document.createElement('div');m.className='mdl';m.innerHTML=`<div class="bz"><div class="big" style="font-size:2rem">${ic}</div><h3 style="margin:6px 0">${ti}</h3><p style="line-height:1.6;margin:8px 0 16px">${esc(msg)}</p><button class="btn" style="width:100%">OK</button></div>`;m.querySelector('button').onclick=()=>{sfx('click');m.remove();cb&&cb()};$('pm').appendChild(m)}
 function lg(l){S.lang=l;render()}
 function render(){if(S.scr!='board')clearInterval(bt);let h=head();
